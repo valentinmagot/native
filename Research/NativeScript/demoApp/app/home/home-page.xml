@@ -1,0 +1,45 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <ActionBar title="" class="action-bar">
+        <ActionItem tap="" class="logo_item" ios.position="left"
+            android.position="actionBar">
+            <StackLayout orientation="horizontal">
+                <Image src="~/images/gcdocs-logo.png" class="gcdocs_logo" />
+            </StackLayout>
+        </ActionItem>
+        <ActionItem tap="" class="text_item" ios.position="right"
+            android.position="actionBar">
+            <StackLayout orientation="horizontal">
+                <Label text="Menu" class="action-label-Home"></Label>
+                <Label text="FR" class="action-label-FR"></Label>
+            </StackLayout>
+        </ActionItem>
+        <ActionItem tap="" class="search_item" ios.systemIcon="12"
+            ios.position="right" android.position="right"></ActionItem>
+    </ActionBar>
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <Label textWrap="true" text="My Favorites" class="h1 description-label" />
+            <ListView class="list-group" items="{{ icons }}" itemTap="{{ onItemTap }}"
+                style="height:1450px">
+                <ListView.itemTemplate>
+                    <FlexboxLayout flexDirection="row" class="list-group-item">
+                        <Label text="{{ icon }}" class="list-group-item-icon" />
+                        <Label text="{{ name }}" class="list-group-item-heading"
+                            verticalAlignment="center" color="blue" />
+                    </FlexboxLayout>
+                </ListView.itemTemplate>
+            </ListView>
+            <StackLayout class="footer-group" ios:horizontalAlignment="left">
+                <FlexboxLayout flexDirection="row" class="footer-group-item">
+                    <Label text="{{ footer_icon }}" class="footer-group-icon" />
+                    <Label text="Help and Support" class="footer-group-item-heading"
+                        verticalAlignment="center" color="blue" />
+                </FlexboxLayout>
+                <Image src="~/images/sig-pspc-en.jpg" class="gov-logo" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</Page>
